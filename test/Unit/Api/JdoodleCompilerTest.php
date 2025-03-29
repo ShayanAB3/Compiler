@@ -39,7 +39,7 @@ class JdoodleCompilerTest extends TestCase{
 
     }
 
-  
+    /** @test */
     public function compile(){
         $jdoodleCompiler = new JdoodleCompiler("php");
         $result = $jdoodleCompiler->compile("<?php echo \"Hello\" ?>");
@@ -48,7 +48,7 @@ class JdoodleCompilerTest extends TestCase{
         $this->assertEquals("Hello",$result->getResultCode());
     }
 
-    
+    /** @test */
     public function compileFile(){
         $jdoodleCompiler = new JdoodleCompiler("php");
         $file = __DIR__."/File/HelloWorld.php";
