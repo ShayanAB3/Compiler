@@ -7,7 +7,7 @@ use User\ComposerTest\Exec\Enum\ConditionalExecutionEnum;
 use User\ComposerTest\Exec\ExecLang;
 
 class CppCompiler extends Compiler{
-    private $lang = "cpp";
+    public $lang = "cpp";
     
     public function execute(string $path,string $input) : array{
         $pathEXE = dirname($path)."/program.exe";

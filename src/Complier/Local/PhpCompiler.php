@@ -6,7 +6,7 @@ use User\ComposerTest\Config\LangProgConfig;
 use User\ComposerTest\Exec\ExecLang;
 
 class PhpCompiler extends Compiler{
-    private string $lang = "php";
+    public string $lang = "php";
 
     public function execute(string $path,string $input) : array{
         $shellExec = new ExecLang(LangProgConfig::getLang($this->getLang()));

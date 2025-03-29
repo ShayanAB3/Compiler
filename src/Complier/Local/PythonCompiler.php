@@ -6,7 +6,7 @@ use User\ComposerTest\Config\LangProgConfig;
 use User\ComposerTest\Exec\ExecLang;
 
 class PythonCompiler extends Compiler{
-    private string $lang = "python";
+    public string $lang = "python";
 
     public function execute(string $path,string $input) : array{
         $shellExec = new ExecLang(LangProgConfig::getLang($this->getLang()));

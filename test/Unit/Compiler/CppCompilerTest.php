@@ -67,7 +67,7 @@ class CppCompilerTest extends TestCase{
 
     /** @test */
     public function compileFile(){
-        $path = "C:\Projects\ComposerTest\src\TestFilesCompiler\C++\Hello.cpp";
+        $path = getcwd()."/src/TestFilesCompiler/C++/Hello.cpp";
         $result = $this->cppCompiler->compileFile($path);
         $this->assertEquals(false,$result->getIsError());
         $this->assertEquals(7,$result->getResultCode());

@@ -51,7 +51,7 @@ class PhpCompilerTest extends TestCase{
 
     /** @test */
     public function compileFile(){
-        $path = "C:\Projects\ComposerTest\src\TestFilesCompiler\PHP\\test1.php";
+        $path = getcwd()."/src/TestFilesCompiler/PHP/test1.php";
         $result = $this->phpCompiler->compileFile($path);
         $this->assertFalse($result->getIsError());
         $this->assertEquals(11,$result->getResultCode());

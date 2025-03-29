@@ -1,10 +1,10 @@
 import json
-        class Test:
-            def addTwoNum(a,b):
-                return a+b
+
+class Test:
+    def addTwoNum(self,a,b):
+        return a+b
 
 a = 5
-
 b = 2
-Test = Test()
-print(json.dumps(Test.addTwoNum(a,b)))
+test = Test()
+print(json.dumps(test.addTwoNum(a,b)))

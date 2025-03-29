@@ -1,0 +1,35 @@
+name: Compiler test
+on: [push]
+jobs:
+    init:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                php-version: '8.3'
+            
+            - name: Setup C++
+              id: install_cc
+              uses: rlalik/setup-cpp-compiler@master
+              with:
+                compiler: latest
+            
+            - name: Setup Java
+              uses: actions/setup-java@v4
+              with:
+                distribution: 'zulu'
+                java-version: '17'
+            
+            - name: Setup Python
+              uses: actions/setup-python@v5
+              with:
+                python-version: '3.12'
+
+            - name: Setup lib C++ nlohmann-json
+              run: apt install -y nlohmann-json3-dev
+            
+            - name: Test run
+              run: php ./vendor/phpunit/phpunit/phpunit test/Unit

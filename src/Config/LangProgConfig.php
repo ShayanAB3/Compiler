@@ -31,7 +31,7 @@ class LangProgConfig{
             "codeBuilder" => PythonCodeBuilder::class,
             "folderCompiler" => "Python",
             "typeFile" => ".py",
-            "command" => "python"
+            "command" => "python3"
         ],
         "java" => [
             "compiler" => JavaCompiler::class,

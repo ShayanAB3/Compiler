@@ -2,10 +2,7 @@
 
 namespace User\ComposerTest\Exec;
 
-use Exception;
 use User\ComposerTest\Exec\Enum\ConditionalExecutionEnum;
-use User\ComposerTest\Helper\Main\FileCompiler;
-use User\ComposerTest\Template\Lang;
 
 abstract class ShellExec{
     protected array $commandLine = [];
